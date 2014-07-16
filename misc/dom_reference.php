@@ -1,5 +1,11 @@
 <?php
-# .portrait-grid .group-item
+
+/**
+ * .portrait-grid .group-item
+ *
+ * @var $summary
+ */
+
 // <li group_id="257143" class="hover-bubble group-item" itemtype="http://schema.org/TVSeries" itemscope="" id="media_group_257143">
 //     <div data-classes="container-shadow-dark" class="wrapper hover-toggle-queue container-shadow hover-classes">
 //       <a class="portrait-element block-link titlefix" href="/ace-of-the-diamond" itemprop="url" token="shows-portraits">
@@ -11,7 +17,14 @@
 //     <button type="button" group_id="257143" id="series_queue_257143" class="queue-button add-queue-button not-queued special-button small-button button" style="display: none;">     <span class="queue-icon"></span>     <span class="queue-label">Add to Queue</span>   </button></div>
 //   </li>
 
-# #sidebar_elements
+
+
+/**
+ * #sidebar_elements
+ *
+ * @var $startdate, $description
+ */
+
 //         <li class="large-margin-bottom">
 //           <img itemprop="image" src="http://img1.ak.crunchyroll.com/i/spire4/3454db4ad48c5ff4592e5cd4d770bc4f1380139027_full.jpg" class="poster xsmall-margin-bottom">
 //           <span id="sharing_add_queue_button" group_id="257143"><button style="display: inline-block;" class="queue-button add-queue-button not-queued special-button small-button button" id="series_queue_257143" group_id="257143" type="button">     <span class="queue-icon"></span>     <span class="queue-label">Add to Queue</span>   </button></span>

@@ -22,7 +22,7 @@ function dd($var){
 
 require 'vendor/phpQuery/phpQuery-onefile.php';
 
-$xcr_ol = json_decode(file_get_contents('cr_ol.json'));
+$xcr_ol = json_decode(file_get_contents('data/cr_ol.json'));
 $cr_ol = [];
 $doc = phpQuery::newDocument(file_get_contents(CRUNCHYROLL_BASE . CRUNCHYROLL_SUMMER_LIST));
 // gather list of items from index
@@ -77,7 +77,7 @@ foreach($cr_ol as $i => $li) {
 }
 
 // save for later
-file_put_contents('cr_ol.json',json_encode($cr_ol));
+file_put_contents('data/cr_ol.json',json_encode($cr_ol));
 
 header('Content-type: text/calendar; charset=utf-8');
 header('Content-Disposition: attachment; filename=crunchyroll.ics');
