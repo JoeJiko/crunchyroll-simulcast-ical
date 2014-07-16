@@ -5,16 +5,6 @@ define('CRUNCHYROLL_BASE', 'http://www.crunchyroll.com');
 define('CRUNCHYROLL_SUMMER_LIST', '/videos/anime/seasons/summer-2014');
 define('EOL', "\r\n");
 
-// helper functions
-function readCSV($csvFile){
-  $file_handle = fopen($csvFile, 'r');
-  while (!feof($file_handle) ) {
-    $line_of_text[] = fgetcsv($file_handle, 1024);
-  }
-  fclose($file_handle);
-  return $line_of_text;
-}
-
 function dd($var){
   var_dump($var);
   die();
@@ -81,31 +71,9 @@ file_put_contents('data/cr_ol.json',json_encode($cr_ol));
 
 header('Content-type: text/calendar; charset=utf-8');
 header('Content-Disposition: attachment; filename=crunchyroll.ics');
-function dayToCal($day) {
-  switch(strtolower($day)){
-    case "sunday":
-      return "SU";
-    case "monday":
-      return "MO";
-    case "tuesday":
-      return "TU";
-    case "wednesday":
-      return "WE";
-    case "thursday":
-      return "TH";
-    case "friday":
-      return "FR";
-    case "saturday":
-      return "SA";
-  }
-}
+
 function dateToCal($timestamp) {
   return date('Ymd\THis\Z', $timestamp);
-}
-
-// Escapes a string of characters
-function escapeString($string) {
-  return preg_replace('/([\,;])/','\\\$1', $string);
 }
 
 $load = "BEGIN:VCALENDAR" . EOL .
